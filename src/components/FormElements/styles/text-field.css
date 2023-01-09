@@ -1,0 +1,15 @@
+form .text-field {
+  @apply w-full border-0 border-b border-aurum-gray bg-transparent text-base;
+}
+
+form .text-field:focus {
+  @apply border-b-aurum-black ring-0;
+}
+
+form .text-field.size-md {
+  @apply py-2 px-1;
+}
+
+form .text-field.size-lg {
+  @apply py-5;
+}

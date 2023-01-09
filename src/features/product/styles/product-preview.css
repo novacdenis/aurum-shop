@@ -1,0 +1,51 @@
+.product-preview {
+  @apply inline-block w-full;
+}
+
+.product-preview__body {
+  @apply relative mb-3 flex items-center justify-center border border-aurum-border py-7;
+}
+
+.product-preview__image img {
+  @apply relative aspect-square h-full min-h-[134px] w-full flex-grow-0 object-cover;
+}
+
+.product-preview__image-placeholder {
+  @apply aspect-square h-full max-h-72 w-full bg-zinc-300;
+}
+
+.product-preview__name {
+  @apply mb-2 text-sm uppercase leading-tight text-aurum-black;
+}
+
+.product-preview__price {
+  @apply text-base leading-tight text-aurum-black;
+}
+
+.products-preview__list {
+  @apply mt-16 mb-8 grid grid-cols-1 gap-x-3 gap-y-12;
+}
+
+@screen xxs {
+  .products-preview__list {
+    @apply grid-cols-2;
+  }
+}
+
+@screen sm {
+  .products-preview__list {
+    @apply grid-cols-3;
+  }
+}
+
+@screen md {
+  .product-box__body {
+    @apply py-9;
+  }
+}
+
+@screen lg {
+  .products-preview__list {
+    @apply mb-16 mt-36 grid-cols-4 gap-x-8 gap-y-10;
+  }
+}

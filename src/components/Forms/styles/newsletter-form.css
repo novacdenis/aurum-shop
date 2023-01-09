@@ -1,0 +1,7 @@
+.newsletter-form .text-field {
+  @apply text-center;
+}
+
+.newsletter-form .text-field::placeholder {
+  @apply text-center uppercase tracking-widest;
+}

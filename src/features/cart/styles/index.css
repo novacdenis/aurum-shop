@@ -1,0 +1,5 @@
+@import "./cart-item.css";
+
+.cart__page {
+  @apply mx-auto max-w-screen-lg;
+}

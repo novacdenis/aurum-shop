@@ -1,0 +1,224 @@
+#desktop-bar {
+  @apply hidden;
+}
+
+#mobile-bar {
+  @apply block;
+}
+
+.header {
+  @apply h-16 bg-aurum-orange px-8 text-aurum-white;
+}
+
+.header.transparent {
+  @apply absolute top-0 left-0 z-10 w-full bg-transparent bg-gradient-to-b from-black/50 to-transparent;
+}
+
+.header__inner {
+  @apply mx-auto flex h-full max-w-[1850px] items-center justify-between;
+}
+
+.navigation__accordion {
+  @apply min-w-fit;
+}
+
+.navigation__link,
+.navigation__accordion-header {
+  @apply flex items-center justify-start py-0 text-sm normal-case tracking-normal text-aurum-white;
+}
+
+.navigation__accordion-header .accordion__item-chevron {
+  @apply ml-2;
+}
+
+.header__actions {
+  @apply flex items-center justify-center space-x-4;
+}
+
+@media screen and (min-width: 1150px) {
+  #desktop-bar {
+    @apply block;
+  }
+
+  #mobile-bar {
+    @apply hidden;
+  }
+}
+
+/* MOBILE MENU */
+.mobile-menu a {
+  @apply block;
+}
+
+.mobile-menu__button {
+  @apply flex w-full items-center px-4 text-sm uppercase tracking-widest text-aurum-white;
+}
+
+.mobile-menu__inner {
+  @apply relative min-h-full bg-aurum-black py-6 px-4 pb-28 text-white;
+}
+
+.mobile-menu__header {
+  @apply mb-6;
+}
+
+.mobile-menu__header .mobile-menu__button {
+  @apply border-t border-b border-aurum-gray py-4;
+}
+
+.mobile-menu__language {
+  @apply absolute bottom-6 left-4 w-auto;
+}
+
+/* SEARCH */
+.search-bar {
+  @apply fixed top-0 left-0 right-0 z-50 flex h-full w-full flex-col items-center justify-start bg-black/50 py-[10vh] text-aurum-white backdrop-blur-lg;
+}
+
+.search-bar .button.variant-text {
+  @apply text-aurum-gray;
+}
+
+.search-bar .button.variant-text:not(:disabled):hover {
+  @apply bg-aurum-white/20 text-aurum-white;
+}
+
+.search-bar__inner {
+  @apply w-full max-w-screen-lg px-8;
+}
+
+.search-bar__title {
+  @apply mb-14 pl-1 text-5xl;
+}
+
+.search-bar__close {
+  @apply absolute top-0 right-0 m-8 flex items-center justify-center;
+}
+
+.search-bar__form {
+  @apply flex flex-col items-start justify-center space-y-4;
+}
+
+.search-bar__form .search-bar__input {
+  @apply w-full flex-1 border-0 border-b border-b-aurum-gray bg-transparent py-6 px-1 placeholder:text-aurum-gray focus:border-b-aurum-white focus:ring-0;
+}
+
+@screen md {
+  .search-bar__form {
+    @apply flex-row items-end space-y-0 space-x-8;
+  }
+}
+
+.search-bar {
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+.search-bar.exit-done {
+  display: none;
+}
+
+.search-bar.enter-active {
+  animation-name: fade;
+}
+
+.search-bar.enter-active .search-bar__inner {
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-name: searchBarContentIn;
+}
+
+.search-bar.exit-active {
+  animation-name: fade;
+  animation-direction: reverse;
+}
+
+@keyframes searchBarContentIn {
+  0%,
+  50% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+  @apply fixed top-0 left-0 right-0 z-50 hidden h-full w-full flex-col items-center justify-start bg-white;
+}
+
+.desktop-menu__inner {
+  @apply flex h-full w-full items-center justify-center px-8;
+}
+
+.desktop-menu__nav {
+  @apply relative z-10 flex flex-col items-center justify-center space-y-8 text-center;
+}
+
+.desktop-menu__link {
+  @apply inline-block text-7xl text-aurum-gray transition-colors hover:text-aurum-black;
+}
+
+.desktop-menu__images {
+  @apply pointer-events-none absolute top-0 left-0 h-full w-full;
+}
+
+.desktop-menu__images img {
+  @apply absolute;
+}
+
+.desktop-menu__images .left-top {
+  @apply left-[8%] top-28;
+}
+
+.desktop-menu__images .left-center {
+  @apply left-[10%] top-[50%] -translate-y-1/2;
+}
+
+.desktop-menu__images .left-bottom {
+  @apply left-[12%] bottom-0;
+}
+
+.desktop-menu__images .right-top {
+  @apply top-0 right-[18%];
+}
+
+.desktop-menu__images .right-center {
+  @apply top-[50%] right-[8%] -translate-y-1/2;
+}
+
+.desktop-menu__images .right-bottom {
+  @apply bottom-[2%] right-[24%];
+}
+
+.desktop-menu__close {
+  @apply absolute top-0 right-0 m-8 flex items-center justify-center;
+}
+
+.desktop-menu {
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+.desktop-menu.exit-done {
+  display: none;
+}
+
+.desktop-menu.enter-active {
+  animation-name: fade;
+}
+
+.desktop-menu.exit-active {
+  animation-name: fade;
+  animation-direction: reverse;
+}
+
+@media only screen and (min-width: 1150px) {
+  .desktop-menu {
+    @apply flex;
+  }
+}

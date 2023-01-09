@@ -1,0 +1,95 @@
+.section {
+  @apply mx-auto max-w-[1750px] py-16 px-8;
+}
+
+.section__header {
+  @apply mb-14;
+}
+
+.section__header.align-left {
+  @apply text-left;
+}
+
+.section__header.align-center {
+  @apply text-center;
+}
+
+.section__header.align-right {
+  @apply text-right;
+}
+
+.section__title {
+  @apply text-4xl;
+}
+
+.section__subtitle {
+  @apply mx-auto mb-7 text-xs uppercase tracking-widest;
+}
+
+.section__paragraph {
+  @apply mx-auto mb-5 max-w-xl text-sm uppercase leading-6;
+}
+
+.section .section__paragraph:last-child {
+  @apply mb-0;
+}
+
+.section__button {
+  @apply relative inline-flex items-center justify-center py-5 px-10 text-sm uppercase tracking-wider;
+}
+
+.section__button::after {
+  @apply absolute h-full w-full -rotate-6 transform rounded-[50%] border border-aurum-black content-[''];
+}
+
+@screen md {
+  .section {
+    @apply py-20;
+  }
+
+  .section__title {
+    @apply text-5xl;
+  }
+
+  .section__subtitle {
+    @apply text-sm;
+  }
+
+  .section__paragraph {
+    @apply text-base leading-8;
+  }
+}
+
+@screen lg {
+  .section {
+    @apply py-28;
+  }
+
+  .section__title {
+    @apply text-6xl;
+  }
+
+  .section__subtitle {
+    @apply text-base;
+  }
+
+  .section__button {
+    @apply py-6 px-12 text-base;
+  }
+}
+
+@screen xl {
+  .section__title {
+    @apply text-7xl;
+  }
+}
+
+@screen 2xl {
+  .section {
+    @apply px-5 py-32;
+  }
+
+  .section__title {
+    @apply text-8xl;
+  }
+}

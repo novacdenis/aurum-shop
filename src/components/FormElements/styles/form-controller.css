@@ -1,0 +1,7 @@
+.form-controller {
+  @apply mb-6;
+}
+
+.form-controller__error {
+  @apply mt-1 text-sm text-red-600;
+}

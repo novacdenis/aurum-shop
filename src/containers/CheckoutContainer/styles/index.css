@@ -1,0 +1,17 @@
+.checkout {
+  @apply relative mx-auto max-w-screen-2xl pt-8;
+}
+
+.checkout__container {
+  @apply grid grid-cols-1 gap-10;
+}
+
+.checkout__section-title {
+  @apply mb-6 text-lg uppercase tracking-widest text-aurum-gray;
+}
+
+@screen lg {
+  .checkout__container {
+    @apply grid-cols-2 gap-12;
+  }
+}

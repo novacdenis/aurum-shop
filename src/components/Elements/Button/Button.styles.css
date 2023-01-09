@@ -1,0 +1,92 @@
+body .button {
+  @apply relative flex h-14 w-full items-center justify-center px-8 text-sm uppercase leading-none tracking-widest;
+
+  transition-property: background-color, border-color, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body .button svg {
+  @apply h-8 w-8;
+}
+
+body .button.variant-contained {
+  @apply bg-aurum-black text-aurum-white;
+}
+
+body .button.variant-contained:not(:disabled):hover {
+  @apply bg-aurum-black-lighten;
+}
+
+body .button.variant-outlined {
+  @apply border border-aurum-gray text-aurum-gray;
+}
+
+body .button.variant-outlined:not(:disabled):hover {
+  @apply border-aurum-black bg-aurum-black/20 text-aurum-black;
+}
+
+body .button.variant-text {
+  @apply text-aurum-gray;
+}
+
+body .button.variant-text:not(:disabled):hover {
+  @apply bg-aurum-black/20 text-aurum-black;
+}
+
+body .button:disabled {
+  @apply opacity-50;
+}
+
+body .button__content {
+  @apply flex scale-100 items-center justify-center space-x-2 opacity-100;
+
+  transition-property: transform, color, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body .button.is-icon-only {
+  @apply h-14 w-14 p-0;
+}
+
+/* Loading */
+body .button.is-loading {
+  @apply opacity-80;
+}
+
+body .button.is-loading .button__content {
+  @apply scale-75 opacity-0;
+}
+
+.button__loading {
+  @apply absolute top-0 left-0 flex h-full w-full items-center justify-center;
+
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+}
+
+.button__loading.exit-done {
+  display: none;
+}
+
+.button__loading.enter-active {
+  animation-name: btn-loading-animation;
+}
+
+.button__loading.exit-active {
+  animation-name: btn-loading-animation;
+  animation-direction: reverse;
+}
+
+@keyframes btn-loading-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

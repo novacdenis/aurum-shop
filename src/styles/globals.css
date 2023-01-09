@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Merriweather", serif;
+    background-color: theme("colors.aurum-tan");
+  }
+}
+
+/* Components */
+@layer components {
+  @import "../components/Elements/Accordion/Accordion.styles.css";
+  @import "../components/Elements/Dropdown/Dropdown.styles.css";
+  @import "../components/Elements/Drawer/Drawer.styles.css";
+  @import "../components/Elements/CircleButton/CircleButton.styles.css";
+  @import "../components/Elements/Button/Button.styles.css";
+  @import "../components/Elements/Section/Section.styles.css";
+  @import "../components/Elements/Banner/Banner.styles.css";
+  @import "../components/Elements/Pagination/Pagination.styles.css";
+  @import "../components/Header/Header.styles.css";
+  @import "../components/Footer/Footer.styles.css";
+  @import "../components/FormElements/styles/index.css";
+  @import "../components/Forms/styles/index.css";
+}
+
+/* Pages/Containers */
+@layer components {
+  @import "../containers/HomeContainer/styles/index.css";
+  @import "../containers/CheckoutContainer/styles/index.css";
+  @import "../containers/ShopContainer/styles/index.css";
+}
+
+/* Features */
+@layer components {
+  @import "../features/product/styles/index.css";
+  @import "../features/cart/styles/index.css";
+}
+
+@import "swiper/css";
+@import "swiper/css/lazy";
+@import "swiper/css/navigation";
+@import "swiper/css/thumbs";
+
+@import "./keyframes.css";
+@import "./extra.css";

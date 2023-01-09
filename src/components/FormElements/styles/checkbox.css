@@ -1,0 +1,15 @@
+.checkbox {
+  @apply flex items-center space-x-4;
+}
+
+.checkbox__root {
+  @apply flex h-6 w-6 items-center justify-center border border-aurum-gray transition-colors;
+}
+
+.checkbox__root:hover {
+  @apply border-aurum-black;
+}
+
+.checkbox__indicator {
+  @apply h-4 w-4 text-aurum-black;
+}

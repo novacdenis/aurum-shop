@@ -1,0 +1,43 @@
+.banner {
+  @apply relative flex h-screen w-full flex-col items-center justify-center bg-cover bg-center px-8 text-center text-aurum-white;
+}
+
+.banner__title {
+  @apply text-4xl;
+}
+
+.banner__paragraph {
+  @apply mx-auto mb-5 max-w-xl text-sm uppercase leading-6;
+}
+
+.banner .banner__paragraph:last-child {
+  @apply mb-0;
+}
+
+@screen md {
+  .banner__title {
+    @apply text-5xl;
+  }
+
+  .banner__paragraph {
+    @apply text-base leading-8;
+  }
+}
+
+@screen lg {
+  .banner__title {
+    @apply text-6xl;
+  }
+}
+
+@screen xl {
+  .banner__title {
+    @apply text-7xl;
+  }
+}
+
+@screen 2xl {
+  .banner__title {
+    @apply text-8xl;
+  }
+}

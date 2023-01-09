@@ -1,0 +1,7 @@
+.feedback-form .text-field {
+  @apply text-center;
+}
+
+.feedback-form .text-field::placeholder {
+  @apply text-center uppercase tracking-widest;
+}

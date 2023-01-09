@@ -1,0 +1,29 @@
+.circle-button {
+  @apply relative flex aspect-square flex-col items-center justify-center rounded-full border border-transparent p-4 transition-colors;
+
+  width: calc(100vw / 3.6);
+  max-width: 356px;
+  min-width: 224px;
+}
+
+.circle-button.on-screen {
+  @apply border-aurum-white;
+}
+
+.circle-button__text {
+  @apply block whitespace-pre-line text-sm uppercase leading-6 text-aurum-white;
+}
+
+.circle-button__icon {
+  @apply mt-5 block;
+}
+
+.circle-button__icon svg {
+  @apply h-8 w-8;
+}
+
+@screen md {
+  .circle-button__icon svg {
+    @apply h-10 w-10;
+  }
+}

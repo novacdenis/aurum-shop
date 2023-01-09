@@ -1,0 +1,26 @@
+@import "./home-slider.css";
+@import "./home-categories.css";
+
+.promotional-banner {
+  @apply overflow-hidden;
+}
+
+.promotional-banner .circle-button {
+  @apply absolute top-0 left-0 translate-x-[50%] translate-y-[10%];
+}
+
+.collection-banner .circle-button {
+  @apply mb-[15vh];
+}
+
+@screen md {
+  .promotional-banner .circle-button {
+    @apply left-auto right-0 translate-x-0;
+  }
+}
+
+@screen lg {
+  .promotional-banner .circle-button {
+    @apply bottom-full top-auto translate-x-3/4 translate-y-[20%];
+  }
+}
